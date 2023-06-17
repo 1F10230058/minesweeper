@@ -116,8 +116,31 @@
   margin-left: 0.5rem;
 }
 
-.hoge {
+.cell {
   width: 30px;
   height: 30px;
   background: url('../../assets/images/icons.png') no-repeat;
+  max-width: 270px;
+}
+
+.board {
+  width: 270px;
+  height: 270px;
+  background-color: #ccc;
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.stone {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  max-width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: outset;
 }
