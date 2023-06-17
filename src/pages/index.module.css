@@ -121,6 +121,7 @@
   height: 30px;
   background: url('../../assets/images/icons.png') no-repeat;
   max-width: 270px;
+  background-position: 0 -100px;
 }
 
 .board {
@@ -143,4 +144,12 @@
   justify-content: center;
   align-items: center;
   border: outset;
+}
+
+.sprite {
+  background-image: url('../../assets/images/icons.png'); /* スプライト画像のパスを指定します */
+  background-repeat: no-repeat;
+  background-position: 0 0; /* 初期位置を指定します */
+  width: 50px;
+  height: 50px;
 }

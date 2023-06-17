@@ -85,6 +85,24 @@ const Home = () => {
     const bombCount = 10;
     const updatedBombMap = placeBombs(bombCount);
     setBombMap(updatedBombMap);
+    const newUserInputs: number[][] = JSON.parse(JSON.stringify(userInputs));
+    let bombCounter = 0;
+    if (userInputs[y][x] === 0)
+      for (const [dy, dx] of direction) {
+        if (
+          board[y + dy] !== undefined &&
+          board[y + dy][x + dx] !== undefined &&
+          [y][x] === bombMap[y][x]
+        ) {
+          if (bombMap[y + dy][x + dx] === 0) bombCounter++;
+        }
+        const bombCounter1 = bombCounter;
+
+        const myElement = document.getElementById('myElement');
+        myElement.style.backgroundPosition = `-${10 * bombCounter}px 0`;
+
+        return;
+      }
   };
 
   return (
@@ -103,5 +121,7 @@ const Home = () => {
 };
 //cssスプライト
 //計算値computed
+//計算値＝状態＋状態
+//board=userInput+bombMap
 
 export default Home;
