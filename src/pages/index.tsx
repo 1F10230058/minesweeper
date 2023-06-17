@@ -98,9 +98,6 @@ const Home = () => {
         }
         const bombCounter1 = bombCounter;
 
-        const myElement = document.getElementById('myElement');
-        myElement.style.backgroundPosition = `-${10 * bombCounter}px 0`;
-
         return;
       }
   };
